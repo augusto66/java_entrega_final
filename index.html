@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Cancha de Pádel</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Reserva de Cancha de Pádel</h1>
+
+        <!-- Formulario para hacer una reserva -->
+        <form id="reservaForm">
+            <h2>Ingresar Datos</h2>
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="dia">Día:</label>
+                <input type="date" id="dia" required>
+            </div>
+            <div class="form-group">
+                <label for="hora">Hora:</label>
+                <input type="time" id="hora" required>
+            </div>
+            <button type="submit" class="button">Ingresar Reserva</button>
+        </form>
+
+        <div id="message" class="message" style="display: none;"></div>
+    </div>
+
+    <!-- Sección separada para mostrar las reservas -->
+    <div class="container">
+        <h1>Lista de Reservas</h1>
+    
+        <!-- Campo para filtrar reservas por fecha -->
+        <div class="form-group">
+            <label for="fechaFiltro">Fecha de reservas:</label>
+            <input type="date" id="fechaFiltro">
+            <button id="filtrarBtn" class="button">VER</button>
+        </div>
+    
+        <table id="reservasTable">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Día</th>
+                    <th>Hora</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="reservasList">
+                <!-- Las reservas se añadirán aquí -->
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/setup.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
